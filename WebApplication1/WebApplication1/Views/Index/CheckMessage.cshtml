@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "CheckMessage";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-3.0.0.js"></script>
+    <link href="~/Content/Message.css" type="text/css" rel="stylesheet" />
+
+    <title>Check Mensaje</title>
+
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+
+        <!-- Links -->
+        <ul class="navbar-nav ">
+            <a class="navbar-brand " href="#">DICOM</a>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="/Home/Index">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Home/CheckMessage">Check Mensaje</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">About</a>
+            </li>
+        </ul>
+
+    </nav>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="formCargar" class="col">
+                <h4>Patient</h4>
+                <textarea id="TextArea1" rows="10" cols="45">
+                 @foreach (var segmento in Model)
+                {
+                    foreach (var campo in segmento.campos)
+                    {
+                @campo.nombre
+                 
+                @campo.data
+
+                    }
+
+                 @segmento.errorText
+
+                   
+
+                }                   
+                </textarea>
+
+
+            </div>
+            <div id="formCargar" class="col">
+                <h4>Patient Visit</h4>
+                <textarea id="TextArea1" rows="10" cols="45"></textarea>
+
+            </div>
+            <div id="formCargar" class="col">
+                <h4>Insurance</h4>
+                <textarea id="TextArea1" rows="10" cols="45"></textarea>
+
+            </div>
+            <div id="formCargar" class="col">
+                <h4>Order</h4>
+                <textarea id="TextArea1" rows="10" cols="45"></textarea>
+
+            </div>
+            <div id="formCargar" class="col">
+                <h4>Order Detail</h4>
+                <textarea id="TextArea1" rows="10" cols="45"></textarea>
+
+            </div>
+            <div id="formCargar" class="col">
+                <h4>Observacion</h4>
+                <textarea id="TextArea1" rows="10" cols="45"></textarea>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <button type="button" id="btnVerificar" class=" btn btn-outline-dark">Verificar</button>
+
+</body>
+</html>
+
+

@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+    <link type="text/css" href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-3.0.0.js"></script>
+    <link href="~/Content/Main.css" type="text/css" rel="stylesheet" />
+
+
+
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+
+        <!-- Links -->
+        <ul class="navbar-nav ">
+            <a class="navbar-brand " href="#">DICOM</a>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="/">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Home/CheckMessage">Check Mensaje</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">About Us</a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+</head>
+
+<body>
+    <div id="menus" class="">
+        <h1>Menu Principal</h1>
+        <a href="/Index/CheckMessage" style="text-decoration:none"><button type="button" id="btnMessage" class="btn btn-outline-info btn-block">Check Message</button></a>
+
+        <a href="/Index/listaAgregados" target="_self" style="text-decoration:none">
+            <button type="button" id="btnAdmision" class="btn btn-outline-warning btn-block">Admision</button>
+        </a>
+        <button type="button" id="btnService" class=" btn btn-outline-success btn-block">Service</button>
+    </div>
+
+
+</body>
+</html>
+
