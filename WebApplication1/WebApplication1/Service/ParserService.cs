@@ -30,7 +30,7 @@ namespace WebApplication1.Service
         
          public List<Segmento> reader2()
          {
-             string[] lines = System.IO.File.ReadAllLines("C:\\Users\\usuario\\Documents\\Bioinfo\\ejemplo.txt");
+             string[] lines = System.IO.File.ReadAllLines("D:\\UPB\\Bioinformatica\\ejemplo.txt");
              int x = lines.Length;
 
 
